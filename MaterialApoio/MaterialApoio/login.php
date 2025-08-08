@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'conexao.php'();
+require_once 'conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit">Entrar</button>
     </form>
 
-    <p><a href="recuperar_senha.php"Esqueci A minha senha></a></p>
+    <p><a href="recuperar_senha.php">Esqueci minha senha</a></p>
 </body>
 
 </html>
