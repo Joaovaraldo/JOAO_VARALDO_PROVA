@@ -45,7 +45,7 @@ $permissoes = [
             "alterar_fornecedor.php", "alterar_produto.php"
         ],
         "excluir" => [
-            "excluir_produto.php"
+            "excluir_pro    duto.php"
         ]
     ]
 ];
