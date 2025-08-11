@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($usuario && password_verify($senha, $usuario['senha'])) {
-        // LOGIN BEM SUCEDIDO DEFINE VARIAVEIS DE SESSÃO
+        // index BEM SUCEDIDO DEFINE VARIAVEIS DE SESSÃO
         $_SESSION['usuario'] = $usuario['nome'];
         $_SESSION['perfil'] = $usuario['id_perfil'];
         $_SESSION['id_usuario'] = $usuario['id_usuario'];
@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         }
     } else {
-        // LOGIN INVALIDO
-        echo "<script>alert('Email ou senha inválidos.'); window.location.href = 'login.php';</script>";
+        // Login INVALIDO
+        echo "<script>alert('Email ou senha inválidos.'); window.location.href = 'index.php';</script>";
     }
 }
 ?>
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <h2>Login</h2>
-    <form action="login.php" method="POST">
+    <form action="index.php" method="POST">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" required>
         <label for="senha">Senha</label>
